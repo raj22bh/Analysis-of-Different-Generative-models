@@ -1,0 +1,60 @@
+import pandas as pd
+
+data = {
+    'Model Name': ['ChatGPT', 'Claude', 'Gemini', 'Perplexity', 'Meta AI'],
+    'Usage Frequency': [15, 12, 20, 10, 8],
+    'Satisfaction Score': [4.3, 4.5, 4.2, 4.1, 4.6],
+    'Accuracy Score': [92, 94, 90, 89, 91],
+    'Primary Use Case': ['General Q&A', 'Customer Support', 'Multilingual Tasks', 'Research', 'Creative Writing'],
+    'Retention Rate': [80, 85, 75, 78, 88],
+    'Churn Rate': [20, 15, 25, 22, 12],
+    'Primary Feedback Topics': ['Accuracy, Personalization', 'Context retention, Response', 'Multilingual support', 'Information depth, Speed', 'Creativity, Richness of Output'],
+    'Recommended Improvements': ['Improve memory for context', 'Increase response variety', 'Enhance response personalization', 'Improve speed for complex queries', 'Allow finer control over style'],
+    'A/B Testing Results': ['5% increase in accuracy in version B', '10% increase in retention in version B', '7% decrease in churn in version B', '8% faster response in version B', '15% more creative output preferred in version B'],
+    'Customer Behavior Insights': ['Users prefer improved memory retention; frequent use in Q&A', 'High usage in customer support; emphasis on quick responses', 'Users report high satisfaction with multilingual support', 'Commonly used for research purposes; demand for faster speed', 'Users enjoy creativity and control over style'],
+    'Roadmap Impact Reports': ['Next update to focus on memory retention and context continuity', 'Planned improvements in contextual understanding', 'Focus on increasing language models and response personalization', 'Improvements to query handling and speed', 'Future updates will add customizable styles and controls']
+}
+
+df = pd.DataFrame(data)
+df
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Model Name', y='Usage Frequency', data=df, palette='viridis')
+plt.title('Usage Frequency by Model')
+plt.xlabel('Model Name')
+plt.ylabel('Usage Frequency (uses/day)')
+plt.show()
+
+
+
+fig, axes = plt.subplots(1, 2, figsize=(14, 7))
+
+df.set_index('Model Name')['Retention Rate'].plot(kind='pie', autopct='%1.1f%%', ax=axes[0], startangle=140, colormap='Blues')
+axes[0].set_title('Retention Rate by Model')
+axes[0].set_ylabel('')
+
+df.set_index('Model Name')['Churn Rate'].plot(kind='pie', autopct='%1.1f%%', ax=axes[1], startangle=140, colormap='Reds')
+axes[1].set_title('Churn Rate by Model')
+axes[1].set_ylabel('')
+
+plt.tight_layout()
+plt.show()
+
+
+# Create dummy data for performance over time
+performance_data = {
+    'Model Name': ['ChatGPT', 'Claude', 'Gemini', 'Perplexity', 'Meta AI'],
+    'Version A': [85, 80, 70, 72, 78],
+    'Version B': [90, 90, 77, 80, 93]
+}
+
+performance_df = pd.DataFrame(performance_data)
+performance_df.set_index('Model Name', inplace=True)
+performance_df.T.plot(kind='line', marker='o', figsize=(10, 6))
+plt.title('Performance Over Time (A/B Testing Results)')
+plt.xlabel('Version')
+plt.ylabel('Performance Metric')
+plt.show()
