@@ -52,11 +52,11 @@ To run this project, you need the following Python libraries:
 
 You can install these dependencies using pip:
 
-pip install pandas matplotlib seaborn  exit
+**pip install pandas matplotlib seaborn  exit
 
 
 
- # **Usage
+ # Usage
 Clone the repository or copy the script.
 Ensure the required libraries are installed.
 Run the Python script to visualize the data:
@@ -64,10 +64,10 @@ Bar chart showing usage frequency.
 Pie charts for retention and churn rates.
 Line graph comparing A/B testing performance.
 
-# **Insights
+# Insights
 ChatGPT has the highest usage frequency and focuses on general Q&A.
 Meta AI leads in retention rate and excels in creative writing with a high satisfaction score.
 Claude shows impressive contextual understanding, reflected in retention rates and user feedback.
 
-# *License
+# License
 This project is licensed under the MIT License. See the LICENSE file for details.
