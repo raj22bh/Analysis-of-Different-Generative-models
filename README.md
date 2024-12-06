@@ -51,9 +51,8 @@ To run this project, you need the following Python libraries:
 - `seaborn`
 
 You can install these dependencies using pip:
-```bash
-pip install pandas matplotlib seaborn  exit
 
+pip install pandas matplotlib seaborn  exit
 
 
 
