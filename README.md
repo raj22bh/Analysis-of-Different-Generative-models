@@ -20,7 +20,7 @@ This project visualizes analytics data for five AI models: ChatGPT, Claude, Gemi
 
 3. **Insights**:
    - Customer behavior and feedback are analyzed for each model.
-   - Roadmap impact reports offer a glimpse into planned improvements.
+   - Roadmap impact reports offer a glimpse into planned improvements .
 
 ---
 
